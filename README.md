@@ -1,32 +1,32 @@
-# María de Letras: Sistema de Gestión de Librería Inteligente
+# María de Letras: Sistema de Gestión de Librería
 
-Bienvenido a **María de Letras**, una solución integral para el control de inventario, ventas y administración de librerías. Este sistema ha sido diseñado con un enfoque profesional, priorizando la confiabilidad de los datos y la experiencia del usuario, incluso en condiciones de conectividad inestable.
+Bienvenido a **María de Letras**, una solución para el control de inventario, ventas y administración de librerías. Este sistema ha sido diseñado con un enfoque profesional, priorizando la confiabilidad de los datos y la experiencia del usuario, incluso en condiciones de conectividad inestable.
 
 ## Características Principales
 
-### 🚀 Tecnología Offline-First (PWA)
+### Tecnología Offline-First (PWA)
 Gracias a la implementación de **Service Workers** e **IndexedDB**, el sistema permite operar el punto de venta sin conexión a Internet.
 - **Ventas sin interrupciones**: Registra ventas y genera tickets provisionales aunque no haya red.
 - **Sincronización Inteligente**: Los datos se sincronizan automáticamente con el servidor una vez que se restablece la conexión.
 - **Catálogo Local**: Búsquedas rápidas de productos garantizadas mediante una copia local del inventario.
 
-### 🔒 Seguridad y Control de Acceso
+###  Seguridad y Control de Acceso
 - **Autenticación Robusta**: Gestión de sesiones protegida con encriptación Bcrypt para contraseñas.
 - **Roles de Usuario**: Niveles de acceso diferenciados para **Administradores** (control total) y **Operadores** (ventas y consultas).
 
-### 📊 Gestión de Inventario y Ventas
+###  Gestión de Inventario y Ventas
 - **Transacciones Atómicas**: Garantizamos que cada venta impacte correctamente el stock mediante transacciones SQL (Commit/Rollback).
 - **Módulo de Compras y Devoluciones**: Registro detallado de entradas de mercancía y gestión de reclamaciones.
 - **Reportes Profesionales**: Generación de reportes de ventas y estados de inventario listos para imprimir.
 
-### 🎨 Interfaz Moderna y Responsiva
+###  Interfaz Moderna y Responsiva
 Diseño visual premium construido con CSS puro, optimizado para una navegación fluida en dispositivos de escritorio y móviles.
 
 ## Guía de Instalación
 
 ### Requisitos Previos
-- Servidor local (XAMPP, WAMP o Laragon) con PHP 7.4+ y MySQL 5.7+.
-- Navegador moderno compatible con PWAs (Chrome, Edge, Firefox).
+- Servidor local XAMPP con PHP 7.4+ y MySQL 5.7+.
+- Navegador compatible con PWAs (Chrome, Edge, Firefox).
 
 ### Pasos para Configurar
 1. **Clonar el Repositorio**:
@@ -47,5 +47,4 @@ Diseño visual premium construido con CSS puro, optimizado para una navegación 
    - Inicie Apache y MySQL en su servidor.
    - Acceda desde `http://localhost/Maria-de-letras`.
 
----
-*Este proyecto representa la convergencia entre la gestión tradicional de librerías y las tecnologías web modernas.*
+
