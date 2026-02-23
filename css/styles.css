@@ -1,0 +1,777 @@
+/* RESPONSABLE: Rol 2 (UX-UI) */
+/* Estilos generales de la aplicación web - Versión Simplificada */
+
+/* ====================================================================
+   ESTILOS GLOBALES Y ESTRUCTURA DE LAYOUT
+   Define la tipografía, el fondo principal y la estructura de los
+   contenedores base y el contenedor principal (main-container)
+==================================================================== */
+
+/* Estilos aplicados al cuerpo de la página: fuente, fondo degradado, centrado del contenido y color de texto base */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #E1580F, #9C0722);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Tarjeta de Login: Contenedor específico para la vista de acceso, centrado y limitado a 400px */
+.container-login {
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 22px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 400px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+/* Alineación para los formularios de la página de inicio */
+.form-index {
+  text-align: left;
+}
+
+/* Estilos de inicialización compartidos: fondo blanco y bordes redondeados */
+.main-container,
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Contenedor Principal: Fija el ancho a 1200px, fondo blanco y centrado en la página */
+.main-container {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 100px auto 30px auto;
+  padding: 22px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilos de tarjetas de contenido: padding, margen y sombra suave */
+.card {
+  padding: 16px;
+  margin: 12px 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  width: 97%;
+}
+
+/* ====================================================================
+   UTILIDADES (UTILITIES)
+   Clases para aplicar rápidamente márgenes, alineación de texto, tamaños
+   de fuente, colores y control de ancho
+==================================================================== */
+
+/* Márgenes superiores comunes */
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+/* Márgenes inferiores comunes */
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+/* Alineación de texto */
+.text-center,
+.text-center-muted {
+  text-align: center;
+}
+
+.text-right,
+.input-cost-small {
+  text-align: right;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* Peso de fuente */
+.font-bold {
+  font-weight: bold;
+}
+
+/* Tamaños de fuente */
+.text-sm {
+  font-size: 14px;
+}
+
+.text-xl {
+  font-size: 20px;
+}
+
+.text-2xl {
+  font-size: 24px;
+}
+
+/* Colores de texto: gris, muted, rojo/peligro y verde/éxito */
+.text-gray,
+.report-footer {
+  color: #555;
+}
+
+.text-muted,
+.text-center-muted,
+.text-small-muted {
+  color: #888;
+}
+
+.text-small-muted {
+  font-size: 0.8em;
+}
+
+.text-red,
+.text-danger,
+.text-danger-simple,
+.link-danger,
+.navbar-menu a,
+.dropbtn,
+.admin-btn-card svg {
+  color: #C82B1D;
+}
+
+.link-danger {
+  text-decoration: none;
+}
+
+.text-green {
+  color: #0e7a0e;
+}
+
+.text-success-bold {
+  color: green;
+  font-weight: bold;
+}
+
+/* Utilidades de ancho */
+.w-full,
+.w-full input,
+.w-full select,
+.input-padded,
+.file-input-padded {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-60 {
+  width: 60px;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+/* Grid & Flexbox */
+.grid-2,
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-end-gap {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Utilidades de ancho para columnas de tabla */
+.col-5 {
+  width: 5%;
+}
+
+.col-10 {
+  width: 10%;
+}
+
+.col-15 {
+  width: 15%;
+}
+
+.col-20 {
+  width: 20%;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+.col-35 {
+  width: 35%;
+}
+
+/* ====================================================================
+   COMPONENTES
+   Estilos específicos para elementos comunes como formularios, tablas,
+   navbar, banners y alertas
+==================================================================== */
+
+/* Banner de bienvenida con borde lateral resaltado */
+.welcome-banner {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 5px solid #C82B1D;
+}
+
+/* Tipografía dentro de las tarjetas */
+.card h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Base de Formularios: estilos para etiquetas y campos de entrada */
+form,
+label {
+  display: block;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+input,
+select,
+textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+/* Resaltado del campo al hacer focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #C82B1D;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(200, 43, 29, 0.15);
+}
+
+.file-input-padded {
+  padding: 7px 0;
+}
+
+/* Tamaños de inputs específicos para cantidades y costos */
+.input-qty-small {
+  width: 80px;
+  text-align: center;
+}
+
+.input-qty-xs {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+}
+
+.input-cost-small {
+  width: 100px;
+}
+
+/* ====================================================================
+   BOTONES (ESTANDARIZADOS)
+   Clases unificadas para las tres categorías de botones (General, Editar, Desactivar)
+==================================================================== */
+
+/* Estilos base compartidos por todos los botones */
+.btn-general,
+.btn-editar,
+.btn-desactivar {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: #fff !important;
+}
+
+/* 1. Botones Generales: Fondo rojo, hover naranja */
+.btn-general {
+  background: #9C0722;
+}
+
+.btn-general:hover {
+  background: #C82B1D;
+}
+
+/* 2. Botones de Edición: Color azul estándar */
+.btn-editar {
+  background-color: #007bff;
+}
+
+.btn-editar:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* 3. Botones de Desactivación: Color rojo de peligro */
+.btn-desactivar {
+  background-color: #dc3545;
+}
+
+.btn-desactivar:hover {
+  background-color: #a71d2a;
+  transform: translateY(-1px);
+}
+
+/* Ajuste: Botones más pequeños cuando se usan en tablas */
+table .btn-editar,
+table .btn-desactivar,
+table .btn-general {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+/* Sobrescribe el ajuste anterior para botones en la barra de navegación */
+.navbar .btn-general {
+  padding: 10px;
+  font-size: 15px;
+}
+
+
+/* Alertas: Mensajes de éxito y error */
+.error-message,
+.alert-custom-danger {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+}
+
+.success-message,
+.alert-custom-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #c3e6cb;
+}
+
+/* Tablas: Estilos base, encabezados, celdas y efecto hover */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #f8f8f8;
+  font-size: 15px;
+  color: #333;
+  text-align: left;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+/* Imagen de producto pequeña para tablas o listados */
+.img-product-small {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+/* Navbar: Barra de navegación superior fija */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-menu a {
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-menu a:hover,
+.dropdown:hover .dropbtn {
+  color: #9F0A1F;
+}
+
+/* Componentes de Administración y Dashboard */
+.content-center-box {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-index {
+  text-align: left;
+}
+
+/* Grid y tarjetas del Dashboard */
+.dashboard-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dashboard-grid>.card {
+  flex: 0 1 400px;
+  margin: 0;
+}
+
+.admin-panel-container {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+/* Grid de acciones de administrador (2 columnas) */
+.admin-grid-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.admin-grid-actions>a:last-child {
+  grid-column: span 2;
+}
+
+/* Tarjetas de botón de administración con ícono */
+.admin-btn-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.admin-btn-card svg {
+  width: 45px;
+  height: 45px;
+  fill: #C82B1D;
+  margin-bottom: 10px;
+}
+
+.admin-btn-card span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Efecto hover en la tarjeta de administración */
+.admin-btn-card:hover {
+  background-color: #C82B1D;
+  border-color: #C82B1D;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(200, 43, 29, 0.2);
+}
+
+.admin-btn-card:hover svg {
+  fill: #fff;
+}
+
+/* Separador horizontal */
+.divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 15px 0 25px 0;
+}
+
+/* Dropdown: Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+  border-top: 3px solid #C82B1D;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #C82B1D;
+}
+
+/* Muestra el dropdown al hacer hover en desktop */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/* Reportes: Estilos para la cabecera, título, metadatos y pie de página de los reportes */
+.report-header {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-title {
+  text-align: center;
+  margin: 0;
+  flex-grow: 1;
+  font-size: 1.8em;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.report-meta {
+  text-align: right;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.report-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  margin-top: 40px;
+  font-size: 0.85em;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos de Responsive: Adaptación para dispositivos móviles y tablets */
+/* Botón de menú (hamburguesa) que solo se muestra en móvil */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+
+/* =========================================
+   TABLAS RESPONSIVAS (SCROLL HORIZONTAL)
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.table-responsive table {
+    min-width: 600px; 
+}
+
+
+@media (max-width: 768px) {
+    th, td {
+        font-size: 13px; 
+        padding: 8px 5px; 
+    }
+}
+
+/* =========================================
+   ESTILOS DASHBOARD MÓVIL (TIPO ESCRITORIO)
+
+/* Reglas de móvil (< 768px) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menú de navegación en modo colapsado (slide-down) */
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
+    z-index: 9999;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .navbar-menu a {
+    margin: 10px 0;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ajustes para el dropdown en móvil */
+  .dropdown,
+  .dropbtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropbtn {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    border-top: none;
+    background-color: #f9f9f9;
+    width: 100%;
+  }
+
+  .dropdown-content.show {
+    display: block !important;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  /* El grid de administración pasa a ser de una columna */
+  .admin-grid-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-grid-actions>a:last-child {
+    grid-column: span 1;
+  }
+}
+
+/* Animación de apertura del menú móvil */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
